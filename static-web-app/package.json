@@ -18,6 +18,15 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=\"text-summary\" --coverageReporters=\"lcov\"",
     "test:coverage:detail": "jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:full": "playwright test --config=playwright.config.full.ts",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:full-headed": "playwright test --config=playwright.config.full.ts --headed",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:report-full": "playwright show-report playwright-report/full-suite",
+    "mcp:server": "tsx mcp-server.ts",
     "check": "npm run type-check && npm run lint && npm run format:check && npm run test",
     "fix": "npm run lint:fix && npm run format",
     "swa:init": "npx swa init --yes",
@@ -44,6 +53,9 @@
     "@azure/static-web-apps-cli": "^2.0.6",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@playwright/mcp": "^0.0.28",
+    "@playwright/test": "^1.52.0",
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/react": "^15.0.0",
     "@types/jest": "^29.5.14",
@@ -63,6 +75,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.3",
+    "tsx": "^4.19.4",
     "typescript": "^5.6.0"
   },
   "keywords": [
@@ -73,6 +86,6 @@
     "personal-website",
     "azure-static-web-apps"
   ],
-  "author": "Kenneth Sølberg",
+  "author": "Kenneth Heine",
   "license": "MIT"
 }

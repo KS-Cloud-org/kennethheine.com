@@ -10,12 +10,13 @@
     "dsznajder.es7-react-js-snippets",
     "formulahendry.auto-rename-tag",
     "christian-kohler.path-intellisense",
-    "zignd.html-css-class-completion",
-
-    // Testing
+    "zignd.html-css-class-completion",    // Testing
     "orta.vscode-jest",
     "ms-playwright.playwright",
     "hbenl.vscode-test-explorer",
+
+    // MCP (Model Context Protocol)
+    "modelcontextprotocol.mcp-client",
 
     // Azure & Infrastructure
     "ms-azuretools.vscode-bicep",

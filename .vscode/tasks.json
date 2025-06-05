@@ -140,6 +140,109 @@
       "problemMatcher": []
     },
     {
+      "label": "Run E2E Tests (Fast)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run E2E Tests (Full Suite)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e:full"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run E2E Tests (Headed)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e:headed"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run E2E Tests (UI Mode)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e:ui"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Show E2E Test Report",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e:report"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Show E2E Full Suite Report",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:e2e:report-full"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Validate Infrastructure",
       "type": "shell",
       "command": "az",
@@ -160,6 +263,24 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Start MCP Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "mcp:server"],
+      "options": {
+        "cwd": "${workspaceFolder}/static-web-app"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "isBackground": true
     }
   ]
 }

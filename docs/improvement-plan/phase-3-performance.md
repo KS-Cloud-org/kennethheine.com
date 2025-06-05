@@ -152,8 +152,8 @@ export const metadata: Metadata = {
   title: 'Kenneth Heine - AI & Cloud Architecture Expert',
   description: 'Expert insights on Azure architecture, DevOps automation, and AI integration for modern software development.',
   keywords: ['Azure', 'Cloud Architecture', 'DevOps', 'AI', 'Infrastructure as Code'],
-  authors: [{ name: 'Kenneth Sølberg' }],
-  creator: 'Kenneth Sølberg',
+  authors: [{ name: 'Kenneth Heine' }],
+  creator: 'Kenneth Heine',
   openGraph: {
     title: 'Kenneth Heine - AI & Cloud Architecture',
     description: 'Expert insights on Azure and AI integration',
@@ -222,7 +222,7 @@ export const metadata: Metadata = {
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Kenneth Sølberg",
+  "name": "Kenneth Heine",
   "jobTitle": "Cloud Architecture Consultant",
   "url": "https://kennethheine.com",
   "sameAs": [

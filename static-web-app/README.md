@@ -70,6 +70,13 @@ A modern, fully static personal brand website built with Next.js 14, TypeScript,
 - **Jest**: JavaScript testing framework
 - **React Testing Library**: React component testing utilities
 - **@testing-library/jest-dom**: Custom Jest matchers
+- **Playwright**: End-to-end testing with cross-browser support
+
+### AI-Enhanced Development
+
+- **Model Context Protocol (MCP)**: AI-powered testing assistance
+- **GitHub Copilot Integration**: Smart test generation and debugging
+- **@playwright/mcp**: Official Playwright MCP server integration
 
 ### Development & Deployment
 
@@ -114,6 +121,11 @@ A modern, fully static personal brand website built with Next.js 14, TypeScript,
 - `npm test` - Run Jest tests
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
+- `npm run test:e2e` - Run Playwright E2E tests (fast configuration)
+- `npm run test:e2e:full` - Run full Playwright test suite (all browsers)
+- `npm run test:e2e:headed` - Run E2E tests in headed mode
+- `npm run test:e2e:ui` - Run E2E tests with Playwright UI
+- `npm run mcp:server` - Start MCP server for AI-enhanced testing
 
 ### Azure Static Web Apps Scripts
 
@@ -164,7 +176,8 @@ Theme colors and styles are defined in `app/globals.css` and `tailwind.config.ts
 
 ## 🧪 Testing
 
-Run the test suite:
+### Unit Testing
+Run the Jest test suite:
 
 ```bash
 # Run all tests
@@ -178,6 +191,39 @@ npm run test:coverage
 ```
 
 Current test coverage: 100% (6 test suites, 32 tests)
+
+### End-to-End Testing
+The project includes comprehensive E2E testing with Playwright:
+
+```bash
+# Quick E2E tests (Chromium only) - ~1.5 minutes
+npm run test:e2e
+
+# Full cross-browser testing - ~10+ minutes
+npm run test:e2e:full
+
+# Run tests with browser UI visible
+npm run test:e2e:headed
+
+# Interactive test development
+npm run test:e2e:ui
+```
+
+### AI-Enhanced Testing with MCP
+The project uses Model Context Protocol for AI-powered testing assistance:
+
+```bash
+# Start MCP server for AI integration
+npm run mcp:server
+```
+
+Features:
+- **Automated test generation** via GitHub Copilot
+- **Intelligent debugging** assistance for failing tests
+- **Test result analysis** and insights
+- **Natural language test planning** through AI chat
+
+See [MCP_SETUP.md](./MCP_SETUP.md) for detailed configuration and usage.
 
 ## 📱 Responsive Design
 

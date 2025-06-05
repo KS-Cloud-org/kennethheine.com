@@ -127,9 +127,7 @@
   // Azure Configuration
   "azure.resourceFilter": [
     "kennethheine-rg"
-  ],
-
-  // GitHub Configuration
+  ],  // GitHub Configuration
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
