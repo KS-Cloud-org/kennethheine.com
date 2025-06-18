@@ -2,16 +2,17 @@
 import { MailIcon } from '@/components/icons/MailIcon';
 import Container from '@/components/layout/Container';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 // SEO metadata for the contact page
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Kenneth Heine about AI automation, DevOps consulting, Azure cloud architecture, or development workflow optimization.',
+    'Get in touch with Kenneth Heine about AI automation, DevOps consulting, Azure cloud architecture, or development workflow optimization. Schedule a consultation or send an email.',
   openGraph: {
     title: 'Contact Kenneth Heine - AI, DevOps & Cloud Consulting',
     description:
-      'Get in touch with Kenneth Heine about AI automation, DevOps consulting, Azure cloud architecture, or development workflow optimization.',
+      'Get in touch with Kenneth Heine about AI automation, DevOps consulting, Azure cloud architecture, or development workflow optimization. Schedule a consultation or send an email.',
     type: 'website',
     url: 'https://kennethheine.com/contact',
     images: [
@@ -32,10 +33,10 @@ export const metadata: Metadata = {
 /**
  * Contact page component
  * Features:
- * - Simple placeholder page as requested
- * - No form elements, no client-side validation, no JS required
- * - Just static content with mailto link
+ * - Email contact option with direct mailto link
+ * - Calendly scheduling widget for consultations
  * - Clean, accessible design
+ * - Responsive layout with proper styling
  */
 export default function ContactPage() {
   return (
@@ -89,6 +90,34 @@ export default function ContactPage() {
                   kenneth@kscloud.io
                 </a>
               </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Calendly Scheduling Section */}
+      <section className='pb-20'>
+        <Container>
+          <div className='mx-auto max-w-4xl'>
+            <div className='text-center mb-8'>
+              <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                Schedule a Consultation
+              </h2>
+              <p className='mt-4 text-lg text-gray-600 dark:text-gray-300'>
+                Prefer to schedule a time that works for both of us? Book a
+                30-minute consultation to discuss your project needs.
+              </p>
+            </div>
+            <div className='rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800 overflow-hidden'>
+              <div
+                className='calendly-inline-widget'
+                data-url='https://calendly.com/kenneth-kscloud/30min'
+                style={{ minWidth: '320px', height: '700px', width: '100%' }}
+              ></div>
+              <Script
+                src='https://assets.calendly.com/assets/external/widget.js'
+                strategy='lazyOnload'
+              />
             </div>
           </div>
         </Container>

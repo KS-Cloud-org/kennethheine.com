@@ -97,4 +97,39 @@ describe('Contact Page', () => {
     expect(emailLink).toBeInTheDocument();
     expect(emailLink).toHaveAttribute('href', 'mailto:kenneth@kscloud.io');
   });
+
+  it('includes Calendly scheduling widget', () => {
+    render(<PageWithProvider />);
+
+    // Check for Calendly scheduling section heading
+    expect(screen.getByText(/Schedule a Consultation/i)).toBeInTheDocument();
+
+    // Check for Calendly widget container using a more direct approach
+    const { container } = render(<PageWithProvider />);
+    const calendlyWidget = container.querySelector('.calendly-inline-widget');
+    expect(calendlyWidget).toBeInTheDocument();
+    expect(calendlyWidget).toHaveAttribute(
+      'data-url',
+      'https://calendly.com/kenneth-kscloud/30min'
+    );
+  });
+
+  it('displays both contact options', () => {
+    render(<PageWithProvider />);
+
+    // Should have both email and scheduling options
+    expect(screen.getByText(/Get in Touch/i)).toBeInTheDocument();
+    expect(screen.getByText(/Schedule a Consultation/i)).toBeInTheDocument();
+
+    // Email option
+    const emailLink = screen.getByRole('link', {
+      name: /kenneth@kscloud\.io/i,
+    });
+    expect(emailLink).toBeInTheDocument();
+
+    // Calendly option
+    expect(
+      screen.getByText(/Book a 30-minute consultation/i)
+    ).toBeInTheDocument();
+  });
 });
